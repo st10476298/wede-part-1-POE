@@ -1,0 +1,41 @@
+# KZN Collectibles & TCG — Web Development PoE (Part 1)
+
+**Student Name:** [Insert Full Name]  
+**Student Number:** ST10476298  
+**Module Name:** Web Development (XHAW5112 / CONE5112)  
+**Institution:** IIE Varsity College / Emeris  
+**Chosen Organisation:** KZN Collectibles & TCG (Retail Store)  
+
+---
+
+## 1. Project Overview
+KZN Collectibles & TCG is a specialized hobby retail outlet in Pietermaritzburg. This repository contains the semantic HTML5 web platform designed to present the shop's product catalogue, facilitate weekly tournament registrations, and manage customer card sourcing enquiries.
+
+## 2. Website Goals & Key Performance Indicators (KPIs)
+* Digitize inventory to achieve 1,800+ monthly catalogue views.
+* Automate event registrations to capture 45+ tournament signups monthly.
+* Provide clear physical location and contact access for both retail branches.
+
+## 3. Sitemap & Page Structure
+* `index.html`: Hero banner, latest expansion arrivals, and tournament alerts.
+* `about.html`: Origin story, community standards, and staff directory.
+* `products.html`: Categorised listings of sealed cards, accessories, and games.
+* `enquiry.html`: Dual-purpose form for tournament RSVPs and card sourcing.
+* `contact.html`: Multi-branch details (PMB Flagship & Hilton Express) with feedback forms.
+
+## 4. Part 1 Implementation Details
+* Formatted strictly using valid HTML5 semantic layout tags (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`, `<fieldset>`).
+* Fully linked cross-page relative navigation on all 5 web pages.
+* Integrated descriptive inline developer comments for code clarity.
+* Structured root directory structure (`css/`, `js/`, `images/`).
+
+## 5. Changelog
+* `2026-09-01`: Initialized Git repository and configured directory architecture.
+* `2026-09-01`: Created standards-compliant HTML5 pages for all 5 sitemap routes.
+* `2026-09-01`: Built multi-location contact section and structured input form.
+* `2026-09-01`: Completed project documentation and initial README.md.
+
+## 6. References (IIE Harvard)
+* Duckett, J., 2014. Web Design with HTML, CSS, JavaScript and jQuery Set. Indianapolis: John Wiley & Sons.
+* MDN Web Docs, 2024. HTML: HyperText Markup Language. Mozilla. Available at: <https://developer.mozilla.org/en-US/docs/Web/HTML> [Accessed 1 September 2026].
+* World Wide Web Consortium (W3C), 2023. Web Content Accessibility Guidelines (WCAG) 2.2. Available at: <https://www.w3.org/TR/WCAG22/> [Accessed 1 September 2026].
