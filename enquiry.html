@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration &amp; Enquiries | KZN Collectibles &amp; TCG</title>
+</head>
+<body>
+    <!-- Main Website Header & Navigation -->
+    <header>
+        <h1>KZN Collectibles &amp; TCG</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Catalogue &amp; Shop</a></li>
+                <li><a href="enquiry.html">Event Registration</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <h2>Tournament Registration &amp; Special Sourcing</h2>
+        <p>Complete the form below to reserve a seat in our weekly sanctioned tournaments or to request rare collectible card sourcing from our global distributor network.</p>
+
+        <!-- Structured Accessible Form -->
+        <form action="#" method="post">
+            <!-- Customer Information Fieldset -->
+            <fieldset>
+                <legend>Player / Customer Details</legend>
+                <div>
+                    <label for="fullName">Full Name &amp; Surname:</label><br>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <br>
+                <div>
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <br>
+                <div>
+                    <label for="contactNumber">Mobile / WhatsApp Number:</label><br>
+                    <input type="tel" id="contactNumber" name="contactNumber" required>
+                </div>
+                <br>
+                <div>
+                    <label for="playerId">Official Game Player ID (Optional):</label><br>
+                    <input type="text" id="playerId" name="playerId" placeholder="e.g., POP ID / DCI Number">
+                </div>
+            </fieldset>
+
+            <br>
+
+            <!-- Enquiry Category & Request Details -->
+            <fieldset>
+                <legend>Enquiry Specification</legend>
+                <div>
+                    <label for="enquiryType">Enquiry Type:</label><br>
+                    <select id="enquiryType" name="enquiryType" required>
+                        <option value="">-- Please Select an Option --</option>
+                        <option value="tournament-friday">Tournament RSVP: Friday Night Casual</option>
+                        <option value="tournament-saturday">Tournament RSVP: Saturday Modern Championship</option>
+                        <option value="preorder">Product Pre-Order / Sealed Box Reservation</option>
+                        <option value="card-sourcing">Rare Single Card Sourcing Request</option>
+                        <option value="table-booking">Open Gaming Table Reservation</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="requestDetails">Detailed Request / Card Information:</label><br>
+                    <textarea id="requestDetails" name="requestDetails" rows="6" cols="45" placeholder="Include deck lists, card names, set expansions, language preferences, or preferred play dates..." required></textarea>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <div>
+                <input type="submit" value="Submit Registration">
+                <input type="reset" value="Clear Form">
+            </div>
+        </form>
+    </main>
+
+    <!-- Global Footer -->
+    <footer>
+        <p>&copy; 2026 KZN Collectibles &amp; TCG. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
