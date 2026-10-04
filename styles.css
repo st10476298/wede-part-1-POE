@@ -1,0 +1,293 @@
+/* ==========================================================================
+   KZN Collectibles & TCG - Master Stylesheet
+   Module: Web Development (XHAW5112 / CONE5112)
+   ========================================================================== */
+
+/* 1. CSS VARIABLES (Default Style Code - Color Scheme & Typography) */
+:root {
+    /* Color Palette */
+    --clr-primary: #D32F2F; /* Crimson Red */
+    --clr-primary-dark: #B71C1C;
+    --clr-bg-dark: #121212; /* Obsidian Black */
+    --clr-bg-card: #1E1E1E;
+    --clr-text-main: #E0E0E0;
+    --clr-text-muted: #9E9E9E;
+    --clr-white: #FFFFFF;
+
+    /* Typography Scale (Relative Units - rem) */
+    --font-base: 'Inter', 'Aptos', system-ui, sans-serif;
+    --font-heading: 'Oswald', 'Impact', sans-serif;
+    --fs-h1: 2.5rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1rem;
+    
+    /* Spacing & Layout */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --border-radius: 8px;
+    --transition: all 0.3s ease-in-out;
+}
+
+/* 2. CSS RESET & BASE STYLES */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-base);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    color: var(--clr-text-main);
+    background-color: var(--clr-bg-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+/* 3. TYPOGRAPHY STYLES */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    color: var(--clr-white);
+    margin-bottom: var(--spacing-md);
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); border-bottom: 2px solid var(--clr-primary); padding-bottom: 0.5rem; }
+h3 { font-size: var(--fs-h3); }
+
+p { margin-bottom: var(--spacing-md); }
+
+/* 4. LAYOUT STRUCTURE (Flexbox & CSS Grid) */
+
+/* Header & Navigation (Flexbox) */
+header {
+    background-color: #000000;
+    padding: var(--spacing-md) 5%;
+    border-bottom: 3px solid var(--clr-primary);
+}
+
+header h1 {
+    margin-bottom: 0;
+    color: var(--clr-primary);
+}
+
+header p {
+    color: var(--clr-text-muted);
+    font-style: italic;
+    margin-bottom: var(--spacing-sm);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--clr-white);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+/* Main Content Wrapper */
+main {
+    flex: 1;
+    padding: var(--spacing-lg) 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Sections & Article Grid (CSS Grid) */
+section {
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Applies a responsive grid to multiple articles sitting next to each other */
+section:has(article) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+/* 5. DECORATION, COLOUR & VISUAL STYLES */
+article, aside, fieldset {
+    background-color: var(--clr-bg-card);
+    padding: var(--spacing-lg);
+    border: 1px solid #333;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+
+aside {
+    border-left: 5px solid var(--clr-primary);
+}
+
+/* 6. INTERACTIVE PSEUDO-CLASSES (:hover, :focus, :active) */
+nav a:hover, nav a:focus {
+    color: var(--clr-primary);
+    text-decoration: underline;
+    outline: none;
+}
+
+nav a:active {
+    color: var(--clr-primary-dark);
+}
+
+/* Card Hover Effects */
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(211, 47, 47, 0.2);
+    border-color: var(--clr-primary);
+}
+
+/* Hyperlinks within text */
+main a {
+    color: var(--clr-primary);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+/* Forms & Inputs */
+fieldset {
+    margin-bottom: var(--spacing-md);
+}
+
+legend {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--clr-primary);
+    padding: 0 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    background-color: #2A2A2A;
+    border: 1px solid #555;
+    color: var(--clr-white);
+    border-radius: 4px;
+    font-family: var(--font-base);
+    transition: var(--transition);
+}
+
+/* Form Interactivity */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--clr-primary);
+    box-shadow: 0 0 8px rgba(211, 47, 47, 0.5);
+}
+
+/* Buttons */
+input[type="submit"], input[type="reset"] {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: var(--transition);
+    margin-right: 10px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: var(--clr-primary-dark);
+}
+
+input[type="reset"] {
+    background-color: #555;
+}
+input[type="reset"]:hover {
+    background-color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    text-align: center;
+    padding: var(--spacing-md);
+    border-top: 1px solid #333;
+    margin-top: auto;
+}
+
+/* 7. RESPONSIVE DESIGN & MEDIA QUERIES (Breakpoints) */
+
+/* Tablet Breakpoint */
+@media (max-width: 992px) {
+    :root {
+        --fs-h1: 2rem;
+        --fs-h2: 1.75rem;
+    }
+    
+    section:has(article) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+
+    /* Responsive Navigation Menu Adaptation */
+    nav ul {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        align-items: center;
+        margin-top: var(--spacing-md);
+    }
+
+    nav a {
+        display: block;
+        padding: 10px 0;
+        width: 100%;
+        border-bottom: 1px solid #333;
+    }
+
+    /* Stack grid elements to a single column on small screens */
+    section:has(article) {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: var(--spacing-md) 3%;
+    }
+
+    input[type="submit"], input[type="reset"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
