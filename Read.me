@@ -1,0 +1,71 @@
+# KZN Collectibles & TCG — Web Development PoE (Part 1 & 2)
+
+**Student Name:** Aston Lee Darson 
+**Student Number:** ST10476298  
+**Module Name:** Web Development 
+**Campus:** Pietermaritzburg (Emeris)
+
+---
+
+## 1. Project Overview & Part 1 Feedback Corrections
+
+KZN Collectibles & TCG is a hobby and collectibles store that focuses on trading cards, games and related accessories. This repository contains the front-end website that I created to display the products, provide information about the store and allow customers to register for events.
+
+### Part 1 Feedback Corrections
+
+Based on the feedback from Part 1, I made a few changes to improve the structure of the website:
+
+- I made sure that the pages use the correct semantic HTML elements, such as `<header>`, `<main>` and `<article>`, instead of relying too much on `<div>` elements.
+- I added the external stylesheet link to all five pages using `<link rel="stylesheet" href="css/styles.css">`. This makes sure that the CSS is correctly connected to each HTML page for Part 2.
+
+---
+
+## 2. Website Goals
+
+The main goals of the KZN Collectibles & TCG website are:
+
+- To make the store's products easier for customers to view online, with a target of 1,500+ catalogue views per month.
+- To make tournament and event registrations easier by allowing customers to sign up online, with a target of 40+ tournament registrations per month.
+
+---
+
+## 3. Sitemap & Page Structure
+
+The website consists of five main pages:
+
+- **`index.html`** – The home page includes a hero section, information about the latest card expansions and updates about upcoming tournaments.
+- **`about.html`** – This page gives some background about the store, its history, community standards and staff.
+- **`products.html`** – Displays the different products available, including sealed trading cards, accessories and games.
+- **`enquiry.html`** – Allows customers to make tournament enquiries or ask about sourcing specific cards.
+- **`contact.html`** – Provides the store's contact information for the PMB Flagship and Hilton Express branches, as well as a feedback form.
+
+---
+
+## 4. Part 2: CSS & Responsive Layout
+
+For Part 2, I focused on improving the overall design of the website and making sure that it works properly on different screen sizes.
+
+- **External Stylesheet:** I created a `styles.css` file and used CSS variables in `:root` to keep the main colours of the website consistent. The main colours are Obsidian Black and Crimson Red.
+- **Layout:** I used Flexbox for the navigation and CSS Grid for the product section. The grid uses `auto-fit` and `minmax()` so that the products can adjust depending on the available screen size.
+- **Typography:** I used relative units such as `rem` and suitable line heights to make the text easier to read on different devices.
+- **Pseudo-Classes:** I added `:hover`, `:focus` and `:active` states to make the website more interactive, especially for product cards and form fields.
+- **Responsive Design:** I added media queries for desktop, tablet and mobile screen sizes. The product layout changes from multiple columns to a single-column layout on smaller smartphone screens.
+
+---
+
+## 5. Development Changelog
+
+- **2026-09-01:** Created the Git repository and set up the main HTML5 pages for Part 1.
+- **2026-10-04:** Created the `styles.css` file and added the global CSS reset and main colour variables.
+- **2026-10-04:** Added a CSS Grid layout for the product cards.
+- **2026-10-04:** Added interactive hover states and focus styles to improve the user experience and accessibility.
+- **2026-10-04:** Added media queries for different screen sizes and adjusted the navigation to stack correctly on mobile devices.
+
+---
+
+## 6. References (IIE Harvard)
+
+- Duckett, J., 2014. *Web Design with HTML, CSS, JavaScript and jQuery Set*. Indianapolis: John Wiley & Sons.
+- Grant, K., 2018. *CSS in Depth*. Shelter Island: Manning Publications.
+- MDN Web Docs, 2026. *Using CSS custom properties (variables)*. Mozilla. Available at: <https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties> [Accessed 4 October 2026].
+- World Wide Web Consortium (W3C), 2023. *Web Content Accessibility Guidelines (WCAG) 2.2*. Available at: <https://www.w3.org/TR/WCAG22/> [Accessed 4 October 2026]. Accessibility Guidelines (WCAG) 2.2. Available at: <https://www.w3.org/TR/WCAG22/> [Accessed 1 September 2026].
